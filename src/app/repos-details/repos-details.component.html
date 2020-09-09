@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="div1">
+    <h1>Repositories</h1>
+    <hr>
+  <div class="d-flex justify-content-around flex-row flex-wrap">
+  <div class="repos col-sm-3 m-4 " *ngFor="let mydata of data" >
+    
+<br>      <p class="big">{{mydata.name}}</p>
+      <p>Created-Date:<br> {{mydata.created_at}}</p>
+      <p>Total-Issues: {{mydata.open_issues}}</p>
+      
+      
+    
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

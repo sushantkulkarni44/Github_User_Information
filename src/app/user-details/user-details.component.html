@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="div1">
+    
+     <div class="container">
+          
+          
+          
+          <!-- image at the top of the card -->
+            <img class="img rounded-circle " src="{{data.avatar_url}}" alt="Card image bouquet">
+          
+         
+              <h2 class="card-title">{{data.name}}</h2>
+              <span>ID : {{data.id}}</span>
+              <span >Followers : {{data.followers}}</span>
+              <span>Following : {{data.following}}</span>
+              <button class="btn bg-danger"href="" [routerLink]="['/repos/',data.login]">Check Repository</button>
+              <br>
+
+              
+            </div>
+          
+        
+         
+     
+  </div>      
+  
+</body>
+</html>
+

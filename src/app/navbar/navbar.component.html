@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <header><h1>GitHub User Info</h1></header> 
+
+<nav class="navbar navbar-expand navbar-dark bg-black">
+
+  <!-- Brand Logo -->
+  <a class="navbar-brand" href="#">
+  <img src="../../assets/Git-Logo-1788C.png" width="80" height="30" alt="image">
+  </a>
+  <!-- Toggle button 
+  + It is important to specify data-toggle, data-target 
+  + and aria-controls -->
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-menu1" aria-controls="my-menu" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapseable navigation menu
+  + It's id is used in data-target -->
+  <div class="collapse navbar-collapse" id="my-menu">
+      <ul class="navbar-nav">
+          
+        <li class="nav-item"><a class="nav-link"href="">Home</a></li>
+        <li class="nav-item"><a class="nav-link"href="">About</a></li>
+         
+         
+      </ul>
+
+  </div> <!-- Collapse End -->
+ 
+  <!-- Navigation form -->
+ 
+
+</nav>
+
+<div id="dropdown">
+
+  <li id="searchBox">
+           
+    <input id="search" type="text" placeholder="Search username" [(ngModel)]="searchValue" (input)="searchName()" autocomplete="off" >
+    
+
+</li>
+<ul  *ngFor="let username of user2">
+  <li [routerLink]="['/users/',username.login]" > {{username.login}}</li>
+
+</ul>
+</div>
+</body>
+</html>
